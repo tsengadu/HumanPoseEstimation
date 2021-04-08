@@ -1,0 +1,85 @@
+    # Project definitions (do not edit)
+Task: Hand_OpenClose
+scorer: Trijana
+date: Apr2
+multianimalproject: false
+
+    # Project path (change when moving around)
+project_path: C:\Users\trija\Desktop\Hand_OpenClose\Hand_OpenClose-Trijana-2021-04-02
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  C:\Users\trija\Desktop\Hand_OpenClose\video1.mp4:
+    crop: 0, 352, 0, 640
+bodyparts:
+- pinkyfinger
+- ringfinger
+- middlefinger
+- indexfinger
+- thumbfinger
+- hand
+start: 0
+stop: 1
+numframes2pick: 20
+
+    # Plotting configuration
+skeleton:
+- - pinkyfinger
+  - ringfinger
+- - ringfinger
+  - middlefinger
+- - ringfinger
+  - indexfinger
+- - thumbfinger
+  - hand
+- - ringfinger
+  - thumbfinger
+- - ringfinger
+  - hand
+- - pinkyfinger
+  - indexfinger
+- - middlefinger
+  - thumbfinger
+- - pinkyfinger
+  - hand
+- - middlefinger
+  - indexfinger
+- - pinkyfinger
+  - thumbfinger
+- - middlefinger
+  - hand
+- - indexfinger
+  - thumbfinger
+- - pinkyfinger
+  - middlefinger
+- - indexfinger
+  - hand
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 8
+alphavalue: 0.7
+colormap: plasma
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+croppedtraining: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
